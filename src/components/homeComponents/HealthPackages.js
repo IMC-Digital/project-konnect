@@ -9,7 +9,7 @@ const HealthPackages = () => {
       <section className="r_section mb-5" id="hp_sec">
         <div>
           <div className="hp-info d-flex">
-            <h2>Health Packages</h2>
+            <h2> - Health Packages - </h2>
             <p className="w1000">
               Konnect Diagnostic Centre: Empowering proactive health management
               through tailored Diagnostic Health Packages for early detection
