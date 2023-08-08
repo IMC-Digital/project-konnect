@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/project-konnect/static/css/main.be1aa72d.css",
-    "main.js": "/project-konnect/static/js/main.2ba0f911.js",
+    "main.js": "/project-konnect/static/js/main.4fa551b4.js",
     "static/js/787.7437625f.chunk.js": "/project-konnect/static/js/787.7437625f.chunk.js",
     "static/media/input.png": "/project-konnect/static/media/input.f257bc3c2ce5ae3a57db.png",
     "static/media/slick.svg": "/project-konnect/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -10,11 +10,11 @@
     "static/media/slick.ttf": "/project-konnect/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/project-konnect/static/media/slick.295183786cd8a1389865.woff",
     "main.be1aa72d.css.map": "/project-konnect/static/css/main.be1aa72d.css.map",
-    "main.2ba0f911.js.map": "/project-konnect/static/js/main.2ba0f911.js.map",
+    "main.4fa551b4.js.map": "/project-konnect/static/js/main.4fa551b4.js.map",
     "787.7437625f.chunk.js.map": "/project-konnect/static/js/787.7437625f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.be1aa72d.css",
-    "static/js/main.2ba0f911.js"
+    "static/js/main.4fa551b4.js"
   ]
 }
