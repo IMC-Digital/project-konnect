@@ -6,7 +6,7 @@ import styled from "styled-components";
 const HealthPackages = ({handleClick}) => {
   return (
     <Wrapper>
-      <section className="r_section mb-5" id="hp_sec">
+      <section className="mb-5" id="hp_sec">
         <div>
           <div className="hp-info d-flex">
             <h2>Health Packages</h2>

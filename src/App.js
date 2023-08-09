@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./App.css";
 import { ThemeProvider } from "styled-components";
+import GlobalStyle from "./styles/global.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage";
 import Header from "./pages/Header";
@@ -70,6 +71,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <div className="App ">
         <CartProvider>
           <Router basename="/project-konnect">

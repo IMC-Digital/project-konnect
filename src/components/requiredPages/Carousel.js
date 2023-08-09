@@ -37,11 +37,13 @@ const MyCarousel = ({handleClick}) => {
 export default MyCarousel;
 
 const Wrapper = styled.section`
+  .carousel {
+    height: 280px;
+  }
   .dot.selected {
     background-color: #005bab;
   }
   .control-arrow {
-    /* display: none; */
     color: red;
     background-color: red;
   }
@@ -54,14 +56,9 @@ const Wrapper = styled.section`
         background-color: red;
       }
     }
-    &:focus {
-      /* background-color: red; */
-    }
+
     button {
       border: 2px solid #005bab;
     }
-  }
-  .carousel-slider ul {
-    /* background-color: red; */
   }
 `;
