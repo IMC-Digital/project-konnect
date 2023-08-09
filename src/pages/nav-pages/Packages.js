@@ -18,7 +18,7 @@ const Packages = ({handleClick}) => {
           </div>
           <div className="hp-box container mt-4 flex-wrap">
             <div className="hpCards d-flex justify-content-center flex-wrap gap-3">
-              {packagesData.map((item, index) => (
+              {packagesData.map((item) => (
                 <HpCard
                   key={item.code}
                   item={item}

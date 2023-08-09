@@ -2,7 +2,7 @@ import React from "react";
 import MyCarousel from "../requiredPages/Carousel";
 import styled from "styled-components";
 
-const SectionFour = () => {
+const SectionFour = ({handleClick}) => {
   return (
     <Wrapper>
       <div className="secFour container ">
@@ -15,7 +15,7 @@ const SectionFour = () => {
           </p>
         </div>
         <div className="cards d-flex">
-          <MyCarousel />
+          <MyCarousel handleClick={handleClick}  />
         </div>
       </div>
     </Wrapper>
