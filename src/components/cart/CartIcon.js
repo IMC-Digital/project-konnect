@@ -7,8 +7,7 @@ const CartIcon = ({ size }) => {
     <Wrapper>
       <div className="cart-icon">
         <FaShoppingCart className="cart-icon" />
-        <span className="item-count">{size}</span>
-        {/* <span>{size}</span> */}
+        <h2 className="item-count">{size}</h2>
       </div>
     </Wrapper>
   );
@@ -22,14 +21,12 @@ const Wrapper = styled.section`
   }
 
   .item-count {
-    /* position: absolute; */
-
-    /* top: -10px; */
-    /* right: -10px; */
     background-color: red;
     color: white;
     border-radius: 50%;
-    /* padding: 10px; */
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
   }
 
   ul {

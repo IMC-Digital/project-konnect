@@ -12,7 +12,7 @@ const blogs = [
   // Add more blog objects as needed
 ];
 
-const ToggleKT = () => {
+const ToggleKT = ({handleClick}) => {
   const [search, setSearch] = useState("");
 
   return (
@@ -64,6 +64,7 @@ const ToggleKT = () => {
                 price={item.price}
                 inv={item.inv}
                 item={item}
+                handleClick={handleClick}
               />
             ))}
         </div>

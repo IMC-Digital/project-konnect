@@ -30,28 +30,30 @@ const Navbar = ({cartSize}) => {
               </NavLink>
             </li>
             <li>
-              <li class="services ">
-                <NavLink to="/services" className="nav-list">
-                  Services
-                </NavLink>
-                <ul class="subMenu">
-                  <li class="subMenuItem ">
-                    <NavLink to="/health-conditions" className="sub-nav-list ">
-                      Health Conditions
-                    </NavLink>
-                  </li>
-                  <li class="subMenuItem ">
-                    <NavLink to="/radiology-services" className="sub-nav-list">
-                      Radiology Services
-                    </NavLink>
-                  </li>
-                  <li class="subMenuItem ">
-                    <NavLink to="/fetal-medicine-unit" className="sub-nav-list">
-                      Fetal Medicine Unit
-                    </NavLink>
-                  </li>
-                </ul>
-              </li>
+              <ul>
+                <li className="services ">
+                  <NavLink to="/services" className="nav-list">
+                    Services
+                  </NavLink>
+                  <ul className="subMenu">
+                    <li className="subMenuItem ">
+                      <NavLink to="/health-conditions" className="sub-nav-list ">
+                        Health Conditions
+                      </NavLink>
+                    </li>
+                    <li className="subMenuItem ">
+                      <NavLink to="/radiology-services" className="sub-nav-list">
+                        Radiology Services
+                      </NavLink>
+                    </li>
+                    <li className="subMenuItem ">
+                      <NavLink to="/fetal-medicine-unit" className="sub-nav-list">
+                        Fetal Medicine Unit
+                      </NavLink>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
             <li>
               <NavLink to="/packages" className="nav-list">

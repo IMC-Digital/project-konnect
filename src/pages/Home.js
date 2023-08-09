@@ -3,21 +3,19 @@ import HeroSection from "../components/homeComponents/HeroSection";
 import SectionTwo from "../components/homeComponents/SectionTwo";
 import SectionThree from "../components/homeComponents/SectionThree";
 import SectionFour from "../components/homeComponents/SectionFour";
-// // import SectionFive from "./SectionFive";
 import HealthPackages from "../components/homeComponents/HealthPackages";
-// import PatientExperience from "../components/homeComponents/PatientExperience";
 import PatExpCarousel from "../components/homeComponents/PatExpCarousel";
 
 
-const Home = () => {
+const Home = ({handleClick}) => {
   return (
     <>
       <div>
         <HeroSection />
-        <SectionTwo />
+        <SectionTwo handleClick={handleClick}/>
         <SectionThree />
-        <SectionFour />
-        <HealthPackages />
+        <SectionFour handleClick={handleClick} />
+        <HealthPackages handleClick={handleClick}/>
         
         <PatExpCarousel />
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useCart } from "react-use-cart";
 // import { testsData } from "../data/AllData";
 
-export const TestCard = (props) => {
+export const TestCard = ({item, handleClick}) => {
   const { addItem } = useCart();
   const [buttonText, setButtonText] = useState("Add to Cart");
   const changeText = (text) => {
@@ -20,18 +20,19 @@ export const TestCard = (props) => {
           </div>
 
           <div className="w-100">
-            <h5 className="tstTitle">{props.title}</h5>
+            <h5 className="tstTitle">{item.title}</h5>
             <p className="tstInv">
-              INVCODE:<b> {props.inv} </b>
+              INVCODE:<b> {item.inv} </b>
             </p>
           </div>
 
           <div className="d-flex w-100 justify-content-between align-items-center border-top pt-3">
-            <h6 className="mb-0 tstPrice">RS {props.price}</h6>
+            <h6 className="mb-0 tstPrice">RS {item.price}</h6>
             <button
               className="tstCardBtn btn"
               onClick={() => {
-                addItem(props.item);
+                handleClick(item);
+                addItem(item);
                 changeText("Added to Cart");
               }}
             >

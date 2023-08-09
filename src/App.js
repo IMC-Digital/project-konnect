@@ -7,7 +7,6 @@ import ErrorPage from "./pages/ErrorPage";
 import Header from "./pages/Header";
 import Home from "./pages/Home";
 import About from "./pages/nav-pages/About";
-import Cart from "./pages/Cart";
 import HomeCollection from "./pages/nav-pages/HomeCollection";
 import Services from "./pages/nav-pages/Services";
 import SingleProduct from "./components/requiredPages/SingleProduct";
@@ -22,11 +21,9 @@ import Footer from "./pages/Footer";
 import Details from "./components/services/Details";
 import { Account } from "./login/Account";
 import { Login } from "./login/Login";
+import { Register } from "./login/Register";
 import FetalMedicineUnit from "./pages/nav-pages/FetalMedicineUnit";
-
-// const mysql = require("mysql2");
-// const connectSQLdb = require("./server/controller/mysql_controller");
-// const sqldb_funcs = require("./server/database/mysql_connection");
+import Cart from "./pages/Cart";
 
 const theme = {
   colors: {
@@ -49,26 +46,27 @@ const theme = {
 };
 
 function App() {
-  const [cart , setCart] = useState([]);
+	const [cart , setCart] = useState([]);
+
 	const handleClick = (item)=>{
     if (cart.indexOf(item) !== -1) return;
 		setCart([...cart, item]);
-    console.log(cart);
 	}
 
-	const handleChange = (item, d) =>{
-		let ind = -1;
-		cart.forEach((data, index)=>{
-			if (data.id === item.id)
-				ind = index;
-		});
-		const tempArr = cart;
-		tempArr[ind].amount += d;
+	// const handleChange = (item, d) =>{
+	// 	let ind = -1;
+	// 	cart.forEach((data, index)=>{
+	// 		if (data.id === item.id)
+	// 			ind = index;
+	// 	});
+	// 	const tempArr = cart;
+	// 	tempArr[ind].amount += d;
 		
-		if (tempArr[ind].amount === 0)
-			tempArr[ind].amount = 1;
-		setCart([...tempArr])
-	}
+	// 	if (tempArr[ind].amount === 0)
+	// 		tempArr[ind].amount = 1;
+	// 	setCart([...tempArr])
+	// }
+  
 
   return (
     <ThemeProvider theme={theme}>
@@ -77,14 +75,14 @@ function App() {
           <Router basename="/project-konnect">
             <Header cartSize={cart.length} />
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Home handleClick={handleClick} />} />
               <Route path="*" element={<ErrorPage />} />
               <Route exact path="/login" element={<Login />} />
+              <Route exact path="/register" element={<Register />} />
               <Route exact path="/account" element={<Account />} />
               <Route path="/about" element={<About />} />
               <Route path="/tests" element={<Tests />} />
               <Route path="/singleproduct/:id" element={<SingleProduct />} />
-              <Route path="/cart" element={<Cart handleChange={handleChange} />} />
               <Route path="/home-collection" element={<HomeCollection />} />
               <Route path="/services" element={<Services />} />
               <Route path="/health-conditions" element={<HealthConditions />} />
@@ -94,6 +92,7 @@ function App() {
               <Route path="/locate-clinic" element={<LocateClinic />} />
               <Route path="/partner-with-us" element={<PartnerWithUs />} />
               <Route path="/fetal-medicine-unit" element={<FetalMedicineUnit />} />
+              <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
 
             </Routes>
             <Footer />

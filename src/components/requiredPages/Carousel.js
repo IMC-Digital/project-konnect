@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 import { TestCard } from "../requiredPages/TestCard";
 import { testsData } from "../../assets/data/AllData";
 
-const MyCarousel = () => {
+const MyCarousel = ({handleClick}) => {
   return (
     <Wrapper className="container">
       <Carousel
@@ -21,11 +21,12 @@ const MyCarousel = () => {
       >
         {testsData.map((item, index) => (
           <TestCard
-            key={index}
-            title={item.title}
-            price={item.price}
-            inv={item.inv}
+            key={item.id}
+            // title={item.title}
+            // price={item.price}
+            // inv={item.inv}
             item={item}
+            handleClick={handleClick}
           />
         ))}
       </Carousel>

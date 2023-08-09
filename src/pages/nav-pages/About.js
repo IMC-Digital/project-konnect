@@ -97,7 +97,7 @@ const About = () => {
         </div>
       </div>
       {/* -----------------------------Section three------------------------------ */}
-      <div class="sec-m s3">
+      <div className="sec-m s3">
         <div className="container s3-info">
           <h2>Accreditations & Approvals</h2>
           <div className="s3-boxes flex flex-r">
@@ -129,7 +129,7 @@ const About = () => {
         </div>
       </div>
       {/* -----------------------------Section three------------------------------ */}
-      <div class="sec-m s4 container flex flex-r">
+      <div className="sec-m s4 container flex flex-r">
         <div className=" s4-info">
           <span className="">Founder -----</span>
           <h3 className="hdng2">Dr. Mahesh Rao</h3>
